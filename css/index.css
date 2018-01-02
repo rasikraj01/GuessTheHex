@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Abel');
+
+*{
+   font-family: 'Abel', sans-serif;
+   text-align: center;
+}
+h1{
+   margin-top: 15vh;
+   font-size: 50px;
+}
+h2{
+   margin-top: 5vh;
+   font-size: 30px;
+}
+ul{
+   display: inline;
+   list-style: none;
+}
