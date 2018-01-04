@@ -32,3 +32,16 @@ for (var i = 0; i < 5; i++) {
 }
 //console.log(html);
 $('.options ul').append(html);
+
+var flag = 0;
+
+$('li').click(function (){
+   var color = this.id;
+   if(color === hex_q){
+      $('.result h4').append('CORRECT!').setTimeut(200 , reload());
+   }
+   else{
+      console.log(false);
+   }
+
+});

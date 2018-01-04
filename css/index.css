@@ -39,7 +39,7 @@ li{
 }
 li:hover{
    cursor: pointer;
-   transform: scale(1.2);
+   transform: scale(1.1);
 }
 .options{
    margin-bottom: 60px;
@@ -59,7 +59,13 @@ li:hover{
    height: 100px;
    text-align: center;
 }
-
+h4{
+   font-weight: 200;
+    margin-top: 25px;
+    font-size: 30px;
+    margin-left: calc(50% - 371px);
+    position: absolute;
+}
 .highScore{
    float: right;
    text-align: center;
