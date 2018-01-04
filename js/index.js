@@ -28,7 +28,7 @@ for (var i = 0; i < 5; i++) {
    if (i === pos) {
       hex_o = hex_q;
    }
-   html += `<li id="${hex_o}" style = "background:#${hex_o}">${hex_o}</li>`;
+   html += `<li id="${hex_o}" style = "background:#${hex_o}"></li>`;
 }
-console.log(html);
+//console.log(html);
 $('.options ul').append(html);
