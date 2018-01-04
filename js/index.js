@@ -21,3 +21,14 @@ function genhex() {
 hex_q = genhex();
 
 $('h2').append(`#${hex_q}`);
+var html = '';
+var pos = Math.floor(Math.random() * 5);
+for (var i = 0; i < 5; i++) {
+   var hex_o = genhex();
+   if (i === pos) {
+      hex_o = hex_q;
+   }
+   html += `<li id="${hex_o}" style = "background:#${hex_o}">${hex_o}</li>`;
+}
+console.log(html);
+$('.options ul').append(html);
