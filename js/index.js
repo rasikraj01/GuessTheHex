@@ -35,7 +35,7 @@ function newHEX() {
 newHEX();
 var score = 0;
 $('.currentScore p').html(score);
-$('li').click(function (){
+$(document).on('click', "li", function (){
    var color = this.id;
    if(color === hex_q){
       score++;
