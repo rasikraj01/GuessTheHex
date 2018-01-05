@@ -3,9 +3,7 @@ function newHEX() {
          return Math.floor((Math.random() * 16) + 1);
    }
 
-   // var hex = `${ran().toString(16)} + ${ran().toString(16)} + ${ran().toString(16)} + ${ran().toString(16)} + ${ran().toString(16)} + ${ran().toString(16)}`;
-
-   function genhex() {
+function genhex() {
       var hex1 = ran().toString(16);
       var hex2 = ran().toString(16);
       var hex3 = ran().toString(16);
@@ -32,6 +30,7 @@ function newHEX() {
    //console.log(html);
    $('.options ul').html(html);
 }
+
 var highScore = localStorage.getItem('HighScore');
 if( highScore === null){
    localStorage.setItem('HighScore', 0);
@@ -41,25 +40,28 @@ if( highScore === null){
 newHEX();
 var score = 0;
 $('.currentScore p').html(score);
+
 $(document).on('click', "li", function (){
    var color = this.id;
    if(color === hex_q){
       score++;
       $('.currentScore p').html(score);
-      $('.result h4').append('CORRECT!');
+      $('.result h4').html('CORRECT!');
       newHEX();
       if (highScore < score) {
          localStorage.setItem('HighScore', score);
          $('.highScore p').html(score);
       }
-      //.setTimeout(location.reload(), 3000)
    }
    else{
-      var lose = `<span style="color: red ; font-weight:300;"> YOU LOSE !</span><div class="newgame">New Game</div>`
-      $('.result h4').append(lose);
-
+      var lose = `<p style="color: red ; font-weight:300; font-size:30px; margin-bottom:10px;"> YOU LOSE !</p>
+      <center><div class="newgame">New Game</div></center>`
+      $('.result h4').html(lose);
+      $("li").click("contextmenu",function(e){
+              return false;
+      });
       $('.newgame').click(function () {
-         console.log('ssss');
+         location.reload();
          newHEX();
          score = 0;
       });

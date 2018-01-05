@@ -10,7 +10,7 @@ body{
    //background: #f5f5f514;
 }
 h1{
-   margin-top: 15vh;
+   margin-top: 10vh;
    font-size: 60px;
    color: #313131;
 
@@ -62,6 +62,9 @@ li:hover{
 h4{
    font-weight: 200;
     margin-top: 25px;
+    width: 200px;
+    height: 200px;
+    text-align: center;
     font-size: 30px;
     margin-left: calc(50% - 371px);
     position: absolute;
@@ -74,4 +77,28 @@ h4{
 }
 .newgame:hover{
    cursor: pointer;
+}
+.newgame{
+   margin: auto;
+   width: 125px;
+   background: #e0e0e0;
+   border-radius: 5px;
+   padding: 8px;
+}
+footer{
+   position: absolute;
+   bottom: 0;
+   font-size: 15px;
+   background: #f1f1f1;
+   padding: 5px 0px;
+   padding-left: 20px;
+   width: 100%;
+}
+footer a{
+   color:#322265;
+   text-decoration: none;
+   transition: all .4s;
+}
+footer a:hover{
+   text-decoration: underline;
 }
