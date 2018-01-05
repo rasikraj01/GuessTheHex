@@ -32,6 +32,12 @@ function newHEX() {
    //console.log(html);
    $('.options ul').html(html);
 }
+var highScore = localStorage.getItem('HighScore');
+if( highScore === null){
+   localStorage.setItem('HighScore', 0);
+}else{
+   $('.highScore p').html(highScore);
+}
 newHEX();
 var score = 0;
 $('.currentScore p').html(score);
@@ -42,6 +48,10 @@ $(document).on('click', "li", function (){
       $('.currentScore p').html(score);
       $('.result h4').append('CORRECT!');
       newHEX();
+      if (highScore < score) {
+         localStorage.setItem('HighScore', score);
+         $('.highScore p').html(score);
+      }
       //.setTimeout(location.reload(), 3000)
    }
    else{
