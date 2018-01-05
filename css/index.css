@@ -72,3 +72,6 @@ h4{
    width: 200px;
    height: 100px;
 }
+.newgame:hover{
+   cursor: pointer;
+}
